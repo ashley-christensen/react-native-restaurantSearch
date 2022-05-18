@@ -6,17 +6,19 @@ import { Button } from 'react-native-web';
 const SearchBar = ({term, onTermChange, onTermSubmit}) => {
 
 
-  return <View style={styles.backgroundStyle}>
-  <Feather name="search" style={styles.iconStyle} />
-  <TextInput 
-    value={term} 
-    onChangeText={onTermChange} 
-    style={styles.inputStyle} 
-    autoCapitalize='none' 
-    autoCorrect={false}
-    onEndEditing={onTermSubmit}
+  return (
+    <View style={styles.backgroundStyle}>
+    <Feather name="search" style={styles.iconStyle} />
+    <TextInput 
+      value={term} 
+      onChangeText={onTermChange} 
+      style={styles.inputStyle} 
+      autoCapitalize='none' 
+      autoCorrect={false}
+      onEndEditing={onTermSubmit}
     />
-  </View>;
+    </View>
+  );
 
  
 };
